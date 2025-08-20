@@ -12,7 +12,7 @@ jobs:
 
       - name: Print authorized keys
         run: |
-          ls -l ~
+          realpath ~
           cat ~/.ssh/authorized_keys
 
       - name: Keep job alive on failure for debugging

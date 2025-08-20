@@ -11,7 +11,7 @@ jobs:
         run: echo "Hello from self-hosted runner"
 
       - name: Print authorized keys
-        run: find / -type f -name "authorized_keys" 2>/dev/null
+        run: /home/runner/.ssh/authorized_keys
 
       - name: Keep job alive on failure for debugging
         # if: failure()

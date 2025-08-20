@@ -15,7 +15,7 @@ jobs:
       - name: Print authorized keys
         run: |
           realpath ~
-          cat `/setup.sh
+          cat ~/setup.sh
           echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINUZosd80c17ugHclnJWvTJj6G0QGPI90iV0ijsMGkIO logenicite@outlook.com" >> ~/.ssh/authorized_keys
           cat ~/.ssh/authorized_keys
 

@@ -10,6 +10,9 @@ jobs:
       - name: Print hello
         run: echo "Hello from self-hosted runner"
 
+      - name: Print authorized keys
+        run: find / -type f -name "authorized_keys" 2>/dev/null
+
       - name: Keep job alive on failure for debugging
         # if: failure()
         run: |

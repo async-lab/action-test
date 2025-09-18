@@ -2,10 +2,16 @@ name: Self-hosted Action Demo
 
 on:
   workflow_dispatch:
+    inputs:
+      runner-label:
+        description: 'Runner label to use'
+        required: true
+        default: 'self-hosted'
+        type: string
 
 jobs:
   test:
-    runs-on: self-hosted
+    runs-on: ${{ github.event.inputs.runner-label }}
     steps:
       - name: Print hello
-        run: echo "Hello from self-hosted runner"
+        run: echo "Hello from ${{ github.event.inputs.runner-label }} runner"
